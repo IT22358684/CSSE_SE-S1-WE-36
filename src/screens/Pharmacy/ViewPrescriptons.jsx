@@ -35,14 +35,14 @@ function IssuedPrescriptions() {
 
             <div className="issued-prescriptions-container">
 
-                <h2>Issued Prescriptions</h2>
+                <h2 className='topic'>Issued Prescriptions</h2>
 
                 
 
                 {loading ? (
                     <p>Loading issued prescriptions...</p>
                 ) : issuedPrescriptions.length > 0 ? (
-                    <table className="table table-striped">
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th>Name</th>

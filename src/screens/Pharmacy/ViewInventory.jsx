@@ -30,15 +30,17 @@ function ViewMedicines() {
 
     <div className="issued-prescriptions-container">
          <NavBar />
-      <h2>Medicine Inventory</h2>
+      <h2 className='topic'>Medicine Inventory</h2>
+<div className='btnContainer text-end'>
+<Link to="/add-medicine" className="btn btn-success mb-3">Add New Medicine</Link>
+</div>
 
-      <Link to="/add-medicine" className="btn btn-success mb-3">Add New Medicine</Link>
 
       {loading ? (
         <p>Loading...</p>
       ) : (
         medicines.length > 0 ? (
-          <table className="table table-striped">
+          <table className="table">
             <thead>
               <tr>
                 <th>Medicine Name</th>
@@ -51,11 +53,11 @@ function ViewMedicines() {
             <tbody>
               {medicines.map((medicine) => (
                 <tr key={medicine.id}>
-                  <td>{medicine.medicineName}</td>
-                  <td>{medicine.dosage}</td>
-                  <td>{medicine.expirationDate}</td>
-                  <td>{medicine.remainingStock}</td>
-                  <td>{medicine.price}</td>
+                  <td style={{width: '40%'}}>{medicine.medicineName}</td>
+                  <td style={{width: '10%' , textAlign: 'center'}}>{medicine.dosage}</td>
+                  <td style={{width: '15%' , textAlign: 'center'}}>{medicine.expirationDate}</td>
+                  <td style={{width: '15%' , textAlign: 'center'}}>{medicine.remainingStock}</td>
+                  <td style={{width: '20%' , textAlign: 'right'}}>{medicine.price}</td>
                 </tr>
               ))}
             </tbody>

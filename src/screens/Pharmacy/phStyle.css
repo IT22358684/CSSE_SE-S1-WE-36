@@ -1,3 +1,43 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
 .dashboardBg {
-    background-color: #000000;
+    background-image: url('C:\Users\user\OneDrive\Documents\GitHub\CSSE_SE-S1-WE-36\public\images\bg.jpg'); /* Correct reference */
+    background-size: cover;
+    background-position: center;
+    height: 90vh; /* Full viewport height */
+}
+
+.searchBar {
+    padding: 50px;
+    margin: 50px;
+}
+
+.searchbtn{
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 60px;
+}
+
+.topic {
+    padding: 20px;
+    text-align: center;
+}
+
+.btnContainer {
+    align-items:end;
+    padding: 10px;
+    margin: 20px;
+}
+
+.table{
+    padding: 10px;
+    margin: 20px;
+    width: 97%;
+}
+
+thead {
+    text-align: center;
 }

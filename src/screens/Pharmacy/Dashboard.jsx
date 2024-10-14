@@ -4,6 +4,7 @@ import { db } from '../firebase';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Nav from './pharmacyNav';
+import './phStyle.css';
 
 function Dashboard() {
   const [healthCardNumber, setHealthCardNumber] = useState('');
@@ -137,21 +138,20 @@ const calculatePayment = async () => {
       <div className='dashboardBg'>
 
       {/* Form for entering health card number */}
-      <div className="position-absolute top-50 start-50 translate-middle">
-        <label className='form-label'> Enter health card number </label>
+      <div className="searchbar" style={{ padding: '60px', paddingTop: '250px' }}>
         <form className="d-flex" role="search" onSubmit={handleSearch}>
           <input
             className="form-control"
             type="search"
-            placeholder="Search"
+            placeholder="Enter health card number..."
             aria-label="Search"
             id="patienID"
             name="patienID"
             value={healthCardNumber}
             onChange={(e) => setHealthCardNumber(e.target.value)}
-            style={{ width: '400px' }}
+            style={{ width: '700px' , padding: '10px'}}
           />
-          <button className="btn btn-outline-success" type="submit">Search</button>
+          <button className="searchbtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
       </div>
 
@@ -184,31 +184,7 @@ const calculatePayment = async () => {
                   <span className="medications-value">{patientData.healthCardNumber}</span>
                 </div>
 
-                <h4>Medication Records</h4>
-                {Array.isArray(patientData.medications) && patientData.medications.length > 0 ? (
-                  <ul>
-                    {patientData.medications.map((medication, index) => (
-                      <li key={index}>
-                        <strong>Date:</strong> {medication.date}
-                        <ul>
-                          {Array.isArray(medication.medications) ? (
-                            medication.medications.map((med, idx) => (
-                              <li key={idx}>
-                                {med.label} - {med.dosage}
-                              </li>
-                            ))
-                          ) : (
-                            <li>
-                              {medication.medications.label} - {medication.medications.dosage}
-                            </li>
-                          )}
-                        </ul>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p>No medications found for this patient.</p>
-                )}
+                
               </div>
             )
           )}
