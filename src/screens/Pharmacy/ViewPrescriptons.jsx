@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getDocs, collection } from 'firebase/firestore'; // Firestore functions
 import { db } from '../firebase'; // Firebase configuration
-import './phStyles.css';
 import NavBar from './pharmacyNav';
 
 function IssuedPrescriptions() {

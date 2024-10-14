@@ -88,7 +88,7 @@ function AdminLogin() {
               </div>
               <a href="/studentforgetpassword"><p className="forget">Forgot Password?<br/></p></a>
               <button type="submit" className='btnloging'>LOGIN</button>
-              <a href="/register"><p className="register">Admin <b>REGISTER</b></p></a>
+              {/* <a href="/register"><p className="register">Admin <b>REGISTER</b></p></a> */}
             </form>
           </div>  
         </div>

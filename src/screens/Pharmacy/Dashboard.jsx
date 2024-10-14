@@ -3,7 +3,7 @@ import { getDocs, collection, query, where, addDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import './phStyles.css';
+import Nav from './pharmacyNav';
 
 function Dashboard() {
   const [healthCardNumber, setHealthCardNumber] = useState('');
@@ -132,33 +132,9 @@ const calculatePayment = async () => {
 
   return (
     <div>
-      <div className='row justify-content-center'>
-        {/* Cards */}
-        <div className="col-3">
-          <button>
-            <a href="ViewInventory" className="btn btn-primary" style={{ width: '18rem' }}>
-              <img src="/images/01.jpeg" className="card-img-top" alt="..." />
-              Inventory
-            </a>
-          </button>
-        </div>
-        <div className="col-3">
-          <button>
-            <a href="#" className="btn btn-primary" style={{ width: '18rem' }}>
-              <img src="/images/01.jpeg" className="card-img-top" alt="..." />
-              Medicine Pricing
-            </a>
-          </button>
-        </div>
-        <div className="col-3">
-          <button>
-            <a href="ViewPrescriptions" className="btn btn-primary" style={{ width: '18rem' }}>
-              <img src="/images/01.jpeg" className="card-img-top" alt="..." />
-              Prescriptions
-            </a>
-          </button>
-        </div>
-      </div>
+      
+      <Nav/>
+      <div className='dashboardBg'>
 
       {/* Form for entering health card number */}
       <div className="position-absolute top-50 start-50 translate-middle">
@@ -257,6 +233,7 @@ const calculatePayment = async () => {
           </Button>
         </Modal.Footer>
       </Modal>
+    </div>
     </div>
   );
 }

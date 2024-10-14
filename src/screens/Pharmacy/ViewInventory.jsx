@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore'; // Firestore functions to fetch data
 import { db } from '../firebase'; // Firebase configuration
 import { Link } from 'react-router-dom';
-import './phStyles.css';
 import NavBar from './pharmacyNav';
 
 function ViewMedicines() {
@@ -28,7 +27,6 @@ function ViewMedicines() {
 
   return (
     <div>
-    <NavBar />
 
     <div className="issued-prescriptions-container">
          <NavBar />
