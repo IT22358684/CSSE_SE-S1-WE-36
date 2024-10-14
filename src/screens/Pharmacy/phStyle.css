@@ -3,7 +3,7 @@
 }
 
 .dashboardBg {
-    background-image: url('C:\Users\user\OneDrive\Documents\GitHub\CSSE_SE-S1-WE-36\public\images\bg.jpg'); /* Correct reference */
+    background-image: url('E:\CSSE\CSSE_SE-S1-WE-36\public\images\bg.jpg'); /* Correct reference */
     background-size: cover;
     background-position: center;
     height: 90vh; /* Full viewport height */
